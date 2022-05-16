@@ -1,0 +1,37 @@
+<%- include("head.ejs"); %>
+<body>
+    <div class="table-responsive-sm">
+        <table class="table table-striped table-sm">
+            <thead>
+                <tr>
+                    <th>Codigo do Produto</th>
+                    <th>Descrição</th>
+                    <th>Codigo do Fornecedor</th>
+                    <th>Codigo da Categoria</th>
+                    <th>Preço</th>
+                    <th>Unidades</th>
+                    <th class="d-print-none">
+                    <a class="btn btn-sm btn-success" href="/inserir">Novo registro</a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            <% for (const mestre of dados) { %>
+                <tr>
+                    <td><%= mestre.CodProd %></td>
+                    <td><%= mestre.Descr %></td>
+                    <td><%= mestre.CodFor %></td>
+                    <td><%= mestre.CodCategoria %></td>
+                    <td><%= mestre.Preco %></td>
+                    <td><%= mestre.Unidades %></td>
+                    <td class="d-print-none">
+                    <a class="btn btn-sm btn-warning" href="/editar/<%= mestre.CodProd %>/<%= mestre.id %>">Edita</a>
+                    <a class="btn btn-sm btn-danger" href="/delete/<%= mestre.CodProd %>/<%= mestre.id %>">Deleta</a>
+                    </td>
+                </tr>
+            <%} %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

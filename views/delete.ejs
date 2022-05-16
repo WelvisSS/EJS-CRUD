@@ -1,0 +1,36 @@
+<%- include("head.ejs") -%> 
+<h4>Delete um registro</h4>
+<form action="/delete/<%= CodProd %>" method="post">
+    <div class="form-horizontal"></div>
+    <div class="form-group">
+        <label>CodProd</label>
+        <input type="text" class="form-control form-control-sm" name="CodProd" value="<%= CodProd %>" readonly="readonly" >
+    </div>
+    <div class="form-group">
+        <label>Descr</label>
+        <input type="text" class="form-control form-control-sm" name="Descr" value="<%= Descr %>" readonly="readonly" >
+    </div>
+    <div class="form-group">
+        <label>CodFor</label>
+        <input type="text" class="form-control form-control-sm" name="CodFor" value="<%= CodFor %>" readonly="readonly" >
+    </div>
+    <div class="form-group">
+        <label>CodCategoria</label>
+        <input type="text" class="form-control form-control-sm" name="CodCategoria" value="<%= CodCategoria %>" readonly="readonly" >
+    </div>
+    <div class="form-group">
+        <label>Preco</label>
+        <input type="text" class="form-control form-control-sm" name="Preco" value="<%= Preco %>" readonly="readonly" >
+    </div>
+    <div class="form-group">
+        <label>Unidades</label>
+        <input type="text" class="form-control form-control-sm" name="Unidades" value="<%= Unidades %>" readonly="readonly" >
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Deletar" class="btn btn-sm btn-dark" />        
+        <a href="/" class="btn btn-outline-primary btn-sm">Voltar</a>
+    </div>
+</form>
+</div>
+</body>
+</html>

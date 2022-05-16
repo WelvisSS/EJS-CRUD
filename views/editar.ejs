@@ -1,0 +1,38 @@
+<%- include("head.ejs") -%>
+<h4>Editar registro</h4>
+<form action="/editar/<%= CodProd %>" method="post">
+    <div class="form-horizontal">
+        </div>
+        <div class="form-group">
+            <label>CodProd</label>
+            <input type="text" class="form-control" name="CodProd" value="<%= CodProd %> ">
+        </div>
+        <div class="form-group">
+            <label>Descr</label>
+            <input type="text" class="form-control" name="Descr" value="<%= Descr %> ">
+        </div>
+        <div class="form-group">
+            <label>CodFor</label>
+            <input type="text" class="form-control" name="CodFor" value="<%= CodFor %> ">
+        </div>
+        <div class="form-group">
+            <label>CodCategoria</label>
+            <input type="text" class="form-control" name="CodCategoria" value="<%= CodCategoria %> ">
+        </div>
+        <div class="form-group">
+            <label>Preço</label>    
+            <input class="form-control" type="text" name="Preco" value="<%= Preco %>" />    
+        </div>    
+        <div class="form-group">    
+            <label>Unidades</label>    
+            <input class="form-control" type="text" name="Unidades" value="<%= Unidades %>" />    
+        </div>
+        <div class="form-group">    
+            <input type="submit" class="btn btn-info" value="Editar"/>    
+            <a href="/" class="btn btn-outline-primary btn-sm">Voltar</a>    
+        </div>    
+    </form>    
+</div>    
+</div>    
+</body>    
+</html>
